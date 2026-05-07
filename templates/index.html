@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>RAG Chatbot</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>🤖 RAG Chatbot</h1>
+      <p>Pose une question sur les documents chargés</p>
+    </header>
+
+    <div class="chat" id="chat">
+      <div class="message bot">
+        <div class="bubble">Bonjour ! Je peux répondre à tes questions
+        à partir des documents chargés. Que veux-tu savoir ?</div>
+      </div>
+    </div>
+
+    <div class="input-area">
+      <input type="text" id="input" placeholder="Pose ta question..."
+             onkeydown="if(event.key==='Enter')sendMessage()">
+      <button onclick="sendMessage()">Envoyer</button>
+    </div>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
